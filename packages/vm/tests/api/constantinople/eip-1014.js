@@ -40,7 +40,7 @@ tape('Constantinople: EIP-1014 CREATE2 creates the right contract address', asyn
 
 
 
-    for (let value = 0; value <= 1000; value++) {
+    for (let value = 0; value <= 1000; value+=20) {
         let runCallArgs = {
             caller: caller,
             gasLimit: new BN(0xffffffffff),
@@ -63,9 +63,10 @@ tape('Constantinople: EIP-1014 CREATE2 creates the right contract address', asyn
         const executionReturnValue = res.execResult.returnValue.slice(12)
         if (!expectedAddress.equals(executionReturnValue)) {
             console.log('not equal')
-            st.fail("contract address not equal")
+            t.fail("contract address not equal")
         }
     }
 
-    st.end()
+    t.end()
 })
+
