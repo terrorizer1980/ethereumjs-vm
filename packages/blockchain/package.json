@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/blockchain#synopsis",
   "dependencies": {
-    "@ethereumjs/block": "~3.0.0",
+    "@ethereumjs/block": "~3.3.0",
     "@ethereumjs/common": "^1.5.0",
     "@ethereumjs/ethash": "^1.0.0",
     "async": "^2.6.1",
